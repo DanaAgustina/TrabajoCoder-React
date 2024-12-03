@@ -1,0 +1,165 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #042e64; 
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  z-index: 10;
+}
+
+.navbar .brandname {
+  font-size: 1.8rem;
+  font-weight: 600;
+  flex: 1; 
+  font-family: 'Cinzel Decorative', serif; /* Aplicamos la fuente aquí */
+}
+
+.navbar .categories {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center; 
+  flex: 2; 
+}
+
+.navbar .categories li a {
+  color: #f4f6f9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .categories li a:hover {
+  color: #ffbb00;
+}
+
+.navbar .card-widget {
+  margin-left: auto; 
+  display: flex;
+  align-items: center;
+}
+
+/* CardWidget */
+.card-widget {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card-widget i {
+  font-size: 2.5rem;
+  color: #ffd95c;
+}
+
+.card-widget:hover {
+  transform: scale(1.1);
+}
+
+.notification-bubble {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ffbb00;
+  color: white;
+  border-radius: 50%;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.card-widget:hover .notification-bubble {
+  background-color: #ffbb00;
+}
+
+/* ItemListContainer */
+.item-list-container {
+  margin-top: 80px; 
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-list-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #002f6c;
+  font-family: 'Cinzel Decorative', serif; /* También lo aplicamos aquí */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

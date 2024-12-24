@@ -1,25 +1,3 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
 /* General */
 * {
   margin: 0;
@@ -29,9 +7,11 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
+  background-color: #121212; /* Fondo oscuro (negro o azul muy oscuro) */
+  color: #f4f6f9; /* Texto blanco/clarito para contrastar */
   line-height: 1.6;
+  padding-top: 80px; /* Para que no se solapen con la navbar fija */
+  text-align: center;
 }
 
 /* Navbar */
@@ -40,44 +20,49 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #042e64; 
+  background-color: #002f6c; /* Azul oscuro para la navbar */
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: white;
   z-index: 10;
+  border-bottom: 3px solid #00bcd4; /* Líneas de separación en celeste */
 }
 
 .navbar .brandname {
-  font-size: 1.8rem;
-  font-weight: 600;
-  flex: 1; 
-  font-family: 'Cinzel Decorative', serif; /* Aplicamos la fuente aquí */
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', serif;
+  color: #00bcd4; /* Color celeste para la marca */
 }
 
 .navbar .categories {
   list-style-type: none;
   display: flex;
   gap: 2rem;
-  justify-content: center; 
-  flex: 2; 
+  justify-content: center;
+  flex: 2;
 }
 
 .navbar .categories li a {
-  color: #f4f6f9;
+  color: #f4f6f9; /* Texto blanco/clarito */
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .navbar .categories li a:hover {
-  color: #ffbb00;
+  background-color: #00bcd4; /* Celeste al hacer hover */
+  color: #fff;
 }
 
 .navbar .card-widget {
-  margin-left: auto; 
+  margin-left: auto;
   display: flex;
   align-items: center;
 }
@@ -95,7 +80,7 @@ body {
 
 .card-widget i {
   font-size: 2.5rem;
-  color: #ffd95c;
+  color: #00bcd4; /* Celeste para el ícono */
 }
 
 .card-widget:hover {
@@ -106,7 +91,7 @@ body {
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: #ffbb00;
+  background-color: #00bcd4; /* Burbuja celeste */
   color: white;
   border-radius: 50%;
   padding: 0.4rem 0.8rem;
@@ -118,48 +103,130 @@ body {
   min-width: 1.5rem;
   min-height: 1.5rem;
   text-align: center;
+}
+
+/* Estilos para los productos en la lista */
+.product-item {
+  display: inline-block;
+  margin: 20px;
+  width: 250px; /* Tamaño de la tarjeta de producto */
+  text-align: center;
+  background-color: #1a1a1a; /* Fondo oscuro para las tarjetas */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.05); /* Efecto hover de escala */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Más sombra al pasar el ratón */
+}
+
+.product-item img {
+  width: 100%;
+  height: 200px; /* Mantener una altura consistente en las imágenes */
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.product-item h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: 600;
+  color: #00bcd4; /* Celeste para el nombre del producto */
+}
+
+.product-item p {
+  font-size: 1rem;
+  color: #ccc; /* Texto gris claro para la descripción */
+  margin-bottom: 10px;
+}
+
+.product-item .btn-view {
+  background-color: #00bcd4; /* Celeste */
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
-.card-widget:hover .notification-bubble {
-  background-color: #ffbb00;
+.product-item .btn-view:hover {
+  background-color: #0097a7; /* Celeste más oscuro al pasar el ratón */
 }
 
-/* ItemListContainer */
-.item-list-container {
-  margin-top: 80px; 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* ItemDetailContainer */
+.item-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #1a1a1a; /* Fondo oscuro para el contenedor del detalle */
   padding: 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-.item-list-container h2 {
+.item-detail img {
+  max-width: 350px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.item-detail h2 {
   font-size: 2rem;
-  font-weight: 600;
-  color: #002f6c;
-  font-family: 'Cinzel Decorative', serif; /* También lo aplicamos aquí */
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #00bcd4; /* Celeste para los encabezados */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-detail p {
+  font-size: 1.2rem;
+  color: #f4f6f9; /* Texto blanco/clarito */
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.item-detail .nutritional-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
-.card {
-  padding: 2em;
+.item-detail .nutritional-info span {
+  font-size: 1rem;
+  color: #ccc; /* Texto gris para la información nutricional */
 }
 
-.read-the-docs {
-  color: #888;
+/* Estilos para el contenedor de productos */
+.item-list-container {
+  margin-top: 100px;
+  padding: 2rem;
+  background-color: #1a1a1a; /* Fondo oscuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+  background-color: #002f6c; /* Azul oscuro */
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1rem;
 }

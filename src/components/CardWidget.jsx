@@ -2,16 +2,12 @@
 import React from 'react';
 
 const CardWidget = () => {
-  const notificationCount = 5; 
-
   return (
     <div className="card-widget">
-      <i className="fas fa-shopping-cart"></i>
-      {notificationCount > 0 && (
-        <span className="notification-bubble">{notificationCount}</span>
-      )}
+      <span>🛒</span>
+      <span>3</span> {/* Aquí puedes poner la cantidad de productos en el carrito */}
     </div>
   );
-}
+};
 
 export default CardWidget;

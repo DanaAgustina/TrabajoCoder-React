@@ -1,40 +1,85 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* index.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #f4f6f9;
+  line-height: 1.6;
+  padding-top: 120px; /* Aumentamos el espacio superior para el navbar */
 }
 
+/* Estilos para la sección de bienvenida */
+.welcome-section {
+  text-align: center;
+  margin-top: 40px; /* Espacio superior */
+  margin-bottom: 40px; /* Espacio inferior */
+}
+
+/* Título de bienvenida */
+.welcome-title {
+  font-size: 3rem; /* Tamaño grande para el título */
+  color: #f4f6f9;
+  font-weight: bold;
+  margin-bottom: 20px; /* Espacio entre el título y la imagen */
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Estilos para la imagen */
+.welcome-section img {
+  width: 80%; /* Ajusta el tamaño de la imagen */
+  max-width: 600px; /* Tamaño máximo de la imagen */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: block; /* Asegura que la imagen se alinee correctamente */
+  margin: 0 auto; /* Centra la imagen */
+}
+
+/* Lista de productos */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  margin-top: 40px; /* Deja espacio antes de la lista de productos */
+}
+
+/* Estilos individuales para cada producto */
+.product-item {
+  display: inline-block;
+  margin: 20px;
+  width: 250px;
+  text-align: center;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para los textos generales */
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  color: #f4f6f9;
+}
+
+
+/* Estilos de los enlaces */
 a {
-  font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+/* Otros ajustes generales */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -46,23 +91,12 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

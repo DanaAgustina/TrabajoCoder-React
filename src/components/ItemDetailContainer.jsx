@@ -1,17 +1,17 @@
 // ItemDetailCointainer.js
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; // Para obtener el itemId desde la URL
-import ItemCount from './ItemCount'; // Asegúrate de tener el componente ItemCount
+import { useParams } from 'react-router-dom'; 
+import ItemCount from './ItemCount'; 
 
 const ItemDetailContainer = () => {
-  const { itemId } = useParams(); // Obtiene el ID del producto desde la URL
+  const { itemId } = useParams(); 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true); // Inicia la carga del producto
+    setLoading(true); 
 
-    // Promise para obtener el detalle del producto
+    
     const fetchProduct = () => {
       return new Promise((resolve, reject) => {
         fetch(`https://world.openfoodfacts.org/api/v0/product/${itemId}.json`)
@@ -24,13 +24,13 @@ const ItemDetailContainer = () => {
     fetchProduct()
       .then((data) => {
         setProduct(data || {});
-        setLoading(false); // Finaliza la carga
+        setLoading(false); 
       })
       .catch((error) => {
         console.error(error);
         setLoading(false);
       });
-  }, [itemId]); // Re-renderiza cuando cambie el itemId
+  }, [itemId]); 
 
   if (loading) {
     return <div>Cargando detalles del producto...</div>;
@@ -46,7 +46,7 @@ const ItemDetailContainer = () => {
           <p>{product.ingredients_text || 'Ingredients not available'}</p>
           <p>{product.nutriments ? `Calories: ${product.nutriments['energy-kcal']} kcal` : 'Nutritional information not available'}</p>
 
-          {/* Componente ItemCount para manejar la cantidad */}
+          {}
           <ItemCount product={product} />
         </>
       ) : (

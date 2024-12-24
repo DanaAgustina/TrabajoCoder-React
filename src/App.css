@@ -7,10 +7,10 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #121212; /* Fondo oscuro (negro o azul muy oscuro) */
-  color: #f4f6f9; /* Texto blanco/clarito para contrastar */
+  background-color: #121212; 
+  color: #f4f6f9; 
   line-height: 1.6;
-  padding-top: 80px; /* Para que no se solapen con la navbar fija */
+  padding-top: 80px; 
   text-align: center;
 }
 
@@ -20,22 +20,21 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #002f6c; /* Azul oscuro para la navbar */
-  padding: 1rem 2rem;
+  background-color: #002f6c; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: white;
   z-index: 10;
-  border-bottom: 3px solid #00bcd4; /* Líneas de separación en celeste */
+  border-bottom: 3px solid #00bcd4; 
 }
 
 .navbar .brandname {
   font-size: 2rem;
   font-weight: 700;
   font-family: 'Cinzel Decorative', serif;
-  color: #00bcd4; /* Color celeste para la marca */
+  color: #00bcd4; 
 }
 
 .navbar .categories {
@@ -47,7 +46,7 @@ body {
 }
 
 .navbar .categories li a {
-  color: #f4f6f9; /* Texto blanco/clarito */
+  color: #f4f6f9; 
   text-decoration: none;
   font-weight: 500;
   font-size: 1.2rem;
@@ -57,7 +56,7 @@ body {
 }
 
 .navbar .categories li a:hover {
-  background-color: #00bcd4; /* Celeste al hacer hover */
+  background-color: #00bcd4; 
   color: #fff;
 }
 
@@ -80,7 +79,7 @@ body {
 
 .card-widget i {
   font-size: 2.5rem;
-  color: #00bcd4; /* Celeste para el ícono */
+  color: #00bcd4; 
 }
 
 .card-widget:hover {
@@ -91,7 +90,7 @@ body {
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: #00bcd4; /* Burbuja celeste */
+  background-color: #00bcd4; 
   color: white;
   border-radius: 50%;
   padding: 0.4rem 0.8rem;
@@ -109,9 +108,9 @@ body {
 .product-item {
   display: inline-block;
   margin: 20px;
-  width: 250px; /* Tamaño de la tarjeta de producto */
+  width: 250px; 
   text-align: center;
-  background-color: #1a1a1a; /* Fondo oscuro para las tarjetas */
+  background-color: #1a1a1a; 
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -119,13 +118,13 @@ body {
 }
 
 .product-item:hover {
-  transform: scale(1.05); /* Efecto hover de escala */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Más sombra al pasar el ratón */
+  transform: scale(1.05); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); 
 }
 
 .product-item img {
   width: 100%;
-  height: 200px; /* Mantener una altura consistente en las imágenes */
+  height: 200px; 
   object-fit: cover;
   transition: opacity 0.3s ease;
 }
@@ -134,17 +133,17 @@ body {
   font-size: 1.2rem;
   margin: 10px 0;
   font-weight: 600;
-  color: #00bcd4; /* Celeste para el nombre del producto */
+  color: #00bcd4; 
 }
 
 .product-item p {
   font-size: 1rem;
-  color: #ccc; /* Texto gris claro para la descripción */
+  color: #ccc; 
   margin-bottom: 10px;
 }
 
 .product-item .btn-view {
-  background-color: #00bcd4; /* Celeste */
+  background-color: #00bcd4; 
   color: white;
   border: none;
   padding: 0.5rem 1.2rem;
@@ -155,7 +154,7 @@ body {
 }
 
 .product-item .btn-view:hover {
-  background-color: #0097a7; /* Celeste más oscuro al pasar el ratón */
+  background-color: #0097a7; 
 }
 
 .product-list {
@@ -170,7 +169,7 @@ body {
 .item-detail {
   max-width: 900px;
   margin: 0 auto;
-  background-color: #1a1a1a; /* Fondo oscuro para el contenedor del detalle */
+  background-color: #1a1a1a; 
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -188,12 +187,12 @@ body {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #00bcd4; /* Celeste para los encabezados */
+  color: #00bcd4; 
 }
 
 .item-detail p {
   font-size: 1.2rem;
-  color: #f4f6f9; /* Texto blanco/clarito */
+  color: #f4f6f9; 
   margin-bottom: 20px;
 }
 
@@ -206,21 +205,21 @@ body {
 
 .item-detail .nutritional-info span {
   font-size: 1rem;
-  color: #ccc; /* Texto gris para la información nutricional */
+  color: #ccc; 
 }
 
 /* Estilos para el contenedor de productos */
 .item-list-container {
   margin-top: 100px;
   padding: 2rem;
-  background-color: #1a1a1a; /* Fondo oscuro */
+  background-color: #1a1a1a; 
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 footer {
-  background-color: #002f6c; /* Azul oscuro */
+  background-color: #002f6c; 
   color: white;
   text-align: center;
   padding: 2rem 0;

@@ -1,12 +1,12 @@
 // Navbar.js
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importamos Link para hacer la navegación sin recargar la página
+import { Link } from 'react-router-dom'; 
 import CardWidget from './CardWidget';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      {/* Envolvemos el nombre de la marca en un Link que dirija al inicio */}
+      {}
       <div className="brandname">
         <Link to="/" style={{ textDecoration: 'none', color: '#00bcd4' }}>
           Fiambrería La Delicia

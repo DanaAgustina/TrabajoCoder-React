@@ -1,7 +1,6 @@
 // ItemList.js
 import React from 'react';
-import ProductItem from './ProductItem'; // Asumiendo que tienes el componente ProductItem
-
+import ProductItem from './ProductItem'; 
 const ItemList = ({ products }) => {
   return (
     <div className="product-list">

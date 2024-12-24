@@ -1,10 +1,10 @@
+// ProductList.js
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const ProductList = ({ category }) => {
   const [products, setProducts] = useState([]);
   
-  // Cargar productos desde la API según la categoría seleccionada
   useEffect(() => {
     fetch(`https://api.sampleapis.com/futurama/products?category=${category}`)
       .then(response => response.json())

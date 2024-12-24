@@ -4,33 +4,33 @@ body {
   background-color: #121212;
   color: #f4f6f9;
   line-height: 1.6;
-  padding-top: 120px; /* Aumentamos el espacio superior para el navbar */
+  padding-top: 120px; 
 }
 
 /* Estilos para la sección de bienvenida */
 .welcome-section {
   text-align: center;
-  margin-top: 40px; /* Espacio superior */
-  margin-bottom: 40px; /* Espacio inferior */
+  margin-top: 40px; 
+  margin-bottom: 40px; 
 }
 
 /* Título de bienvenida */
 .welcome-title {
-  font-size: 3rem; /* Tamaño grande para el título */
+  font-size: 3rem; 
   color: #f4f6f9;
   font-weight: bold;
-  margin-bottom: 20px; /* Espacio entre el título y la imagen */
-  text-transform: uppercase; /* Texto en mayúsculas */
+  margin-bottom: 20px; 
+  text-transform: uppercase; 
 }
 
 /* Estilos para la imagen */
 .welcome-section img {
-  width: 80%; /* Ajusta el tamaño de la imagen */
-  max-width: 600px; /* Tamaño máximo de la imagen */
+  width: 80%; 
+  max-width: 600px; 
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  display: block; /* Asegura que la imagen se alinee correctamente */
-  margin: 0 auto; /* Centra la imagen */
+  display: block; 
+  margin: 0 auto; 
 }
 
 /* Lista de productos */
@@ -40,7 +40,7 @@ body {
   justify-content: center;
   gap: 30px;
   padding: 20px;
-  margin-top: 40px; /* Deja espacio antes de la lista de productos */
+  margin-top: 40px; 
 }
 
 /* Estilos individuales para cada producto */

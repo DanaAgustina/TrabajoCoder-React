@@ -229,3 +229,132 @@ footer {
 footer p {
   font-size: 1rem;
 }
+
+/* App.css */
+
+/* Contenedor de la imagen y el texto */
+.welcome-section {
+  position: relative; /* Necesario para posicionar el texto sobre la imagen */
+  width: 100%;
+  height: 800px; /* O ajusta la altura según lo que necesites */
+  overflow: hidden; /* Asegura que la imagen y el texto no sobresalgan fuera del contenedor */
+}
+
+.image-container {
+  position: relative; /* Para que el texto se posicione encima de la imagen */
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  width: 100%; /* La imagen se ajusta al tamaño del contenedor */
+  height: 100%; /* La imagen ocupa toda la altura del contenedor */
+  object-fit: cover; /* Mantiene la imagen proporcional y recorta lo necesario */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; /* Coloca el texto en el centro vertical */
+  left: 50%; /* Coloca el texto en el centro horizontal */
+  transform: translate(-50%, -50%); /* Ajuste fino para centrar el texto */
+  color: white; /* Color del texto, blanco para mayor contraste con la imagen */
+  font-size: 7em; /* Ajusta el tamaño del texto según el diseño */
+  font-weight: bold; /* Hace el texto más destacable */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Sombra del texto para que resalte sobre la imagen */
+  text-align: center; /* Centra el texto dentro de su área */
+  padding: 0 20px; /* Agrega espaciado alrededor del texto si es necesario */
+  max-width: 90%; /* Asegura que el texto no se salga del contenedor */
+  box-sizing: border-box;
+  z-index: 10; /* Asegura que el texto esté por encima de la imagen */
+  font-family: 'Cinzel Decorative', sans-serif;
+  background-color: #0000003b;
+}
+/* Estilos para el widget del carrito */
+.cart-widget {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cart-widget i {
+  font-size: 2.5rem;
+  color: #00bcd4;
+}
+
+.cart-widget:hover {
+  transform: scale(1.1);
+}
+
+.notification-bubble {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 50%;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  text-align: center;
+}
+
+/* Estilos para el carrito emergente (pantalla completa) */
+.cart-widget-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.cart-popup {
+  background-color: #1a1a1a;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.cart-popup h2 {
+  margin-top: 40px;
+  font-size: 2.5rem;
+  color: #00bcd4;
+}
+
+.cart-popup .cart-items {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  z-index: 9998;
+  display: block;
+}

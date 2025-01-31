@@ -1,12 +1,13 @@
 // Navbar.js
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { Link } from 'react-router-dom'; 
-import CardWidget from './CardWidget';
+import { Link, /*useLocation*/} from 'react-router-dom'; 
+import CartWidget from './CartWidget';
 
 const Navbar = () => {
+  //const location = useLocation(); 
   return (
     <nav className="navbar">
-      {}
       <div className="brandname">
         <Link to="/" style={{ textDecoration: 'none', color: '#00bcd4' }}>
           Fiambrería La Delicia
@@ -19,9 +20,12 @@ const Navbar = () => {
         <li><Link to="/categoria/pan">Pan</Link></li>
         <li><Link to="/categoria/bebidas">Bebidas</Link></li>
       </ul>
-      <CardWidget />
+     
+      <CartWidget />
     </nav>
   );
 }
 
 export default Navbar;
+
+//  {location.pathname !== '/checkout' && <CartWidget />}

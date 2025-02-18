@@ -1,11 +1,9 @@
+/* eslint-disable no-unused-vars */
 // ItemDetailCointainer.js
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import { getItem } from '../firebase/db';
-
-
 function ItemDetailContainer () {
   const { itemId } = useParams(); 
   const [item, setItem] = useState();

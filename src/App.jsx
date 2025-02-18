@@ -1,12 +1,13 @@
+/* eslint-disable no-unused-vars */
 // App.js
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import Cart from './components/Cart';
 import CartProvider from './context/CartProvider';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-//import Checkout from './components/Checkout';
-import './App.css';
+import Checkout from './components/Checkout';
 
 function App ()  {
   return (
@@ -18,7 +19,7 @@ function App ()  {
           <Route path="/categoria/:categoryId" element={<ItemListContainer />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
-         
+          <Route path="/checkout" element={<Checkout />} /> 
         </Routes>
       </BrowserRouter>
     </CartProvider>
@@ -26,5 +27,3 @@ function App ()  {
 }
 
 export default App;
-
-// <Route path="/checkout" element={<Checkout />} />
